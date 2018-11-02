@@ -8,7 +8,7 @@
 * Dealer or player may to flip over each card to display it's value.
 * Dealer's or player's points display for visible cards only.
 
-#npm install
-*install dependencies
+## npm install
+* install dependencies
 
-#npm start
+## npm start
