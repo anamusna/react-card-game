@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Page, Content, Header, Button, ControlBar } from '../styles/Layout';
+import { Page, Content, Button, ControlBar } from '../styles/Layout';
 import { getAngle } from '../helpers';
 
 import CardFlip from '../Card/CardFlip';

@@ -2,11 +2,11 @@ import React from 'react';
 import { BaseSuit, BlackSuit, RedSuit, SuitGroupItem } from '../styles/Suits';
 
 export const SuitSymbol = (props) =>
-	[ 'hearts', 'diamonds' ].indexOf(props.suit) !== -1 ? <RedSuit {...props} /> : <BlackSuit {...props} />;
+	['hearts', 'diamonds'].indexOf(props.suit) !== -1 ? <RedSuit {...props} /> : <BlackSuit {...props} />;
 
 export const SuitFace = ({ suit, image }) => (
 	<BaseSuit>
-		<img src={image} />
+		<img src={image} alt="cards" />
 	</BaseSuit>
 );
 

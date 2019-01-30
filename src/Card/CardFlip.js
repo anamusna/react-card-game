@@ -12,7 +12,7 @@ class CardFlip extends Component {
 
 	flipFace = () => {
 		const { face } = this.state;
-		const { onFlip, roleName, code, angle } = this.props;
+		const { onFlip, roleName, code } = this.props;
 		console.log(`CardFlip - flip: (${code}) was ${face ? 'Up' : 'Down'}`);
 
 		this.setState((prevState) => ({ face: !prevState.face }));
