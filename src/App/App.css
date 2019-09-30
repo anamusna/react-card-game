@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Bungee|Cantarell');
+
+.App {
+	flex: 1;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	/* overflow-x: scroll; */
+	/* overflow-y: visible; */
+}
+
+@media (max-width: 992px) {
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import Hand from '../Hand/';
-
+import './Game.css';
 import { getDeckId, getFirstCards, drawCard, turnFaceUp } from '../Api/';
 
 import { halveArray, updateItem, getPoints } from '../helpers';
@@ -26,14 +26,14 @@ const GameOver = ({ playerPoints, dealerPoints }) => (
 
 class Game extends Component {
 	state = {
-		startingCards: this.props.match.params.startingCards || 10,
-		remaining: 0,
-		gameOver: false,
-		deckId: 0,
-		dealerPoints: 0,
-		playerPoints: 0,
-		dealerPile: [],
-		playerPile: []
+		startingCards : this.props.match.params.startingCards || 10,
+		remaining     : 0,
+		gameOver      : false,
+		deckId        : 0,
+		dealerPoints  : 0,
+		playerPoints  : 0,
+		dealerPile    : [],
+		playerPile    : []
 	};
 
 	setCardsInGame = (data) => {
@@ -44,8 +44,8 @@ class Game extends Component {
 
 		this.setState({
 			...newState,
-			dealerPile: updatedDealerCards,
-			dealerPoints: getPoints(updatedDealerCards),
+			dealerPile   : updatedDealerCards,
+			dealerPoints : getPoints(updatedDealerCards),
 			playerPile
 		});
 	};
@@ -57,8 +57,8 @@ class Game extends Component {
 
 		this.setState({
 			remaining,
-			dealerPile: [ ...dealerPile, ...turnFaceUp(dealerCard) ],
-			playerPile: [ ...playerPile, ...playerCard ]
+			dealerPile : [ ...dealerPile, ...turnFaceUp(dealerCard) ],
+			playerPile : [ ...playerPile, ...playerCard ]
 		});
 	};
 
@@ -104,7 +104,7 @@ class Game extends Component {
 		const { gameOver, remaining, dealerPile, playerPile, playerPoints, dealerPoints } = this.state;
 
 		return (
-			<div>
+			<div className="App">
 				{gameOver ? (
 					<GameOver playerPoints={playerPoints} dealerPoints={dealerPoints} />
 				) : (

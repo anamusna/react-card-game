@@ -1,20 +1,25 @@
 import styled, { css } from 'styled-components';
 
 const FlexDiv = styled.div`
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	padding: 0 0.25rem;
 `;
 const FlexItem = styled.div`
+	/* 	width: 100vw; */
 	margin: 0.25rem;
 	padding: 0.25rem;
 	text-align: center;
 	flex: 1 0;
 	width: 100%;
-	${({ minh }) => minh && css`min-height: ${minh};`};
+	/* 	border: 1px solid red; */
+	align-items: center;
+	justify-content: center;
 `;
 export const Button = styled.button`
 	background: #111;
@@ -22,6 +27,7 @@ export const Button = styled.button`
 	font-size: 1.2rem;
 	border: 1px solid #333;
 	padding: 0.5rem 1.5rem;
+	margin: auto;
 `;
 export const ButtonLink = styled(Button)`
   a {
@@ -41,7 +47,8 @@ export const Header = styled(FlexDiv)`
 export const Content = styled(FlexItem)`
   font-size: 2rem;
   display: flex;
-  justify-content: space-between;
+	justify-content: space-between;
+	
 `;
 
 export const TextContent = styled.p`
@@ -72,5 +79,7 @@ export const ControlBar = styled(Subheader)`
     color: #fff;
     font-size: 1.3rem;
     white-space: nowrap;
-  }
+	}
+	
+	
 `;
